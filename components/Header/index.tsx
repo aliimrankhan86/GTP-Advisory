@@ -89,7 +89,7 @@ const Header = () => {
           </Link>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-2 font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity">
+            <PopoverButton className="focus:outline-none flex items-center gap-x-2 font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity">
               Vehicles
               <Icon aria-hidden="true" name="caret-down" />
             </PopoverButton>
@@ -117,7 +117,7 @@ const Header = () => {
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-2 font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity">
+            <PopoverButton className="focus:outline-none flex items-center gap-x-2 font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity">
               All Pages
               <Icon aria-hidden="true" name="caret-down" />
             </PopoverButton>
