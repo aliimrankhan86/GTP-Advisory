@@ -149,7 +149,13 @@ const Header = () => {
         </PopoverGroup>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button as="link" href="/contact" icon="arrow-up-right" secondary>
+          <Button
+            className="border-white/12 text-white"
+            as="link"
+            href="/contact"
+            icon="arrow-up-right"
+            stroke
+          >
             Get In Touch
           </Button>
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Onest, Figtree } from "next/font/google";
 import "./globals.css";
+import LenisProvider from "./providers/LenisProvider";
 
 const onest = Onest({
   variable: "--font-onest",
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${onest.variable} ${figtree.variable} antialiased`}>
-        {children}
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   );

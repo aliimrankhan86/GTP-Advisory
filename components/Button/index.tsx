@@ -40,7 +40,7 @@ const Button: React.FC<ButtonProps> = ({
       : ""
   } ${
     secondary
-      ? "py-4 px-6 bg-transparent font-figtree text-sm font-medium text-white border border-white/12 border-[1px] hover:bg-white hover:text-black"
+      ? "py-4 px-6 bg-neutral-100 font-figtree text-sm font-medium text-neutral-950 border border-white/12 border-[1px] hover:bg-neutral-200 hover:text-black"
       : ""
   } ${
     isGray
@@ -52,7 +52,7 @@ const Button: React.FC<ButtonProps> = ({
       : "px-6.5"
   } ${
     stroke
-      ? "border-s-stroke2 fill-t-secondary text-t-secondary hover:border-s-highlight hover:text-t-primary hover:fill-t-primary disabled:border-transparent"
+      ? "py-4 px-6 bg-transparent font-figtree text-sm font-medium text-neutral-950 border border-neutral-100 border-[1px] hover:bg-neutral-100 hover:text-black"
       : ""
   } ${className || ""}`;
 
