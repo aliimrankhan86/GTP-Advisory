@@ -3,7 +3,7 @@
 import Icon from "@/components/Icon";
 import { features } from "@/mocks/features";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -12,6 +12,8 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Features = () => {
   const container = useRef<HTMLDivElement>(null);
+
+  const [videoOpen, setVideoOPen] = useState(false);
 
   useGSAP(
     () => {
@@ -61,6 +63,7 @@ const Features = () => {
             </div>
 
             <button
+              onClick={() => setVideoOPen(true)}
               className="absolute inset-0 flex items-center justify-center cursor-pointer"
               aria-label="Play video"
             >
@@ -85,6 +88,32 @@ const Features = () => {
           ))}
         </dl>
       </div>
+
+      {videoOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center"
+          onClick={() => setVideoOPen(false)}
+        >
+          <div
+            className="relative w-full max-w-3xl aspect-video"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/MhVpNSC9zR8?si=nPpUFZdj9taGU_0Q"
+              title="Demo Video"
+              className="w-full h-full rounded-xl"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+            <button
+              className="absolute top-4 right-4 text-white text-2xl"
+              onClick={() => setVideoOPen(false)}
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
