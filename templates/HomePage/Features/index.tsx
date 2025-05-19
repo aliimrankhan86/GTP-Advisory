@@ -43,7 +43,7 @@ const Features = () => {
         <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
           CORE FEATURES
         </div>
-        <h1 className="animate mt-4 font-onest text-5xl font-medium text-neutral-950 lg:text-7xl">
+        <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
           Pure Electric Precision
         </h1>
         <p className="animate mt-4 max-w-3xl font-figtree text-lg text-neutral-500">

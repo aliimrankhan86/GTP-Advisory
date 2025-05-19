@@ -26,7 +26,7 @@ const Vehicle = ({ vehicle }: VehicleProps) => {
         <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-lime-300">
           VEHICLE — {vehicle.vehicle}
         </div>
-        <h2 className="mt-4 font-onest text-4xl font-medium text-white lg:text-5xl">
+        <h2 className="mt-4 font-onest text-4xl font-medium leading-[1.2] text-white lg:text-5xl">
           {vehicle.name}
         </h2>
         <p className="mt-4 font-figtree text-base text-white/80">

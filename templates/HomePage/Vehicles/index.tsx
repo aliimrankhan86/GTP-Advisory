@@ -36,9 +36,9 @@ const Vehicles = () => {
     <div ref={container} className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-          INTRODUCTION
+          OUR VEHICLES
         </div>
-        <h1 className="animate mt-4 font-onest text-5xl font-medium text-neutral-950 lg:text-7xl">
+        <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
           Explore the Lineup
         </h1>
 

@@ -38,7 +38,7 @@ const Highlights = () => {
           <span className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
             01 — 03
           </span>
-          <h2 className="animate mt-4 font-onest text-4xl text-neutral-950 font-medium lg:text-5xl">
+          <h2 className="animate mt-4 font-onest text-4xl leading-[1.2] text-neutral-950 font-medium lg:text-5xl">
             Ultra-Fast Charging
           </h2>
           <p className="animate mt-4 font-figtree text-lg text-neutral-500">
@@ -75,7 +75,7 @@ const Highlights = () => {
           <span className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-lime-300">
             02 — 03
           </span>
-          <h2 className="animate mt-4 font-onest text-4xl text-white font-medium lg:text-5xl">
+          <h2 className="animate mt-4 font-onest text-4xl leading-[1.2] text-white font-medium lg:text-5xl">
             Precision Handling
           </h2>
           <p className="animate mt-4 font-figtree text-lg text-neutral-400">
@@ -94,7 +94,7 @@ const Highlights = () => {
           <span className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
             03 — 03
           </span>
-          <h2 className="animate mt-4 font-onest text-4xl text-neutral-950 font-medium lg:text-5xl">
+          <h2 className="animate mt-4 font-onest text-4xl leading-[1.2] text-neutral-950 font-medium lg:text-5xl">
             Driver Assist AI
           </h2>
           <p className="animate mt-4 font-figtree text-lg text-neutral-900">

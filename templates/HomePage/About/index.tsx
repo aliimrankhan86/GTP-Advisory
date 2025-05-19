@@ -49,7 +49,7 @@ const About = () => {
             <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
               INTRODUCTION
             </div>
-            <h1 className="animate mt-4 font-onest text-5xl font-medium text-neutral-950 lg:text-7xl">
+            <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
               0 Emissions, 100% Thrill
             </h1>
 
