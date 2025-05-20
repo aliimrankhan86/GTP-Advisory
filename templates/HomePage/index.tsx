@@ -6,6 +6,7 @@ import Vehicles from "./Vehicles";
 import Features from "./Features";
 import Showcase from "./Showcase";
 import Reviews from "./Reviews";
+import News from "./News";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <Features />
       <Showcase />
       <Reviews />
+      <News />
     </Layout>
   );
 };
