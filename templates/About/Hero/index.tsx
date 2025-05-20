@@ -52,7 +52,6 @@ const Hero = () => {
       </div>
     </div>
   );
-  r;
 };
 
 export default Hero;
