@@ -4,7 +4,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Button from "@/components/Button";
 import Vehicle from "@/components/Vehicle";
 import { vehicles } from "@/mocks/vehicles";
 

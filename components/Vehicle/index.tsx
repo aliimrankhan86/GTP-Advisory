@@ -8,6 +8,7 @@ type Vehicle = {
   range: string;
   top_speed: string;
   mph: string;
+  slug: "string";
 };
 
 type VehicleProps = {
@@ -59,7 +60,9 @@ const Vehicle = ({ vehicle }: VehicleProps) => {
         </div>
 
         <div className="mt-8 flex items-center gap-x-4">
-          <Button primary>View Details</Button>
+          <Button as="link" href={`/vehicles/${vehicle.slug}`} primary>
+            View Details
+          </Button>
           <Button secondary>Order Now</Button>
         </div>
       </div>

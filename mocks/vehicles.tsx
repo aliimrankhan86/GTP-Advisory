@@ -2,12 +2,13 @@ export const vehicles = [
   {
     image: "/vehicles/IONIQ_5/01.webp",
     vehicle: "01",
-    name: "2025 IONIQ 5",
+    name: "2025 IONIQ 5",
     description:
       "Perfect for tight streets and quick commutes, with instant torque and parking assist.",
     range: "370 miles",
     top_speed: "155 mph",
     mph: "3.2 seconds",
+    slug: "2025-ioniq-5",
   },
   {
     image: "/vehicles/KONA_ELECTRIC/01.webp",
@@ -18,6 +19,7 @@ export const vehicles = [
     range: "400 miles",
     top_speed: "145 mph",
     mph: "4.2 seconds",
+    slug: "2025-kona-electric",
   },
   {
     image: "/vehicles/SANTA_FE_Hybrid/01.webp",
@@ -28,6 +30,7 @@ export const vehicles = [
     range: "380 miles",
     top_speed: "150 mph",
     mph: "4.2 seconds",
+    slug: "santa-fe-hybrid",
   },
   {
     image: "/vehicles/IONIQ_9/01.webp",
@@ -38,6 +41,7 @@ export const vehicles = [
     range: "340 miles",
     top_speed: "145 mph",
     mph: "5.2 seconds",
+    slug: "2025-ioniq-9",
   },
   {
     image: "/vehicles/2025_SONATA/01.webp",
@@ -48,5 +52,6 @@ export const vehicles = [
     range: "370 miles",
     top_speed: "160 mph",
     mph: "4.1 seconds",
+    slug: "2025-sonata",
   },
 ];
