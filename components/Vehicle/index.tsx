@@ -1,21 +1,11 @@
+import { Vehicle as VehicleType } from "@/types/vehicle";
 import Button from "../Button";
 
 type Vehicle = {
-  image: string;
-  vehicle: string;
-  name: string;
-  description: string;
-  range: string;
-  top_speed: string;
-  mph: string;
-  slug: string;
+  vehicle: VehicleType;
 };
 
-type VehicleProps = {
-  vehicle: Vehicle;
-};
-
-const Vehicle = ({ vehicle }: VehicleProps) => {
+const Vehicle = ({ vehicle }: Vehicle) => {
   return (
     <div
       className="animate relative h-[600px] bg-cover bg-center lg:h-[700px]"

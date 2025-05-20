@@ -1,16 +1,8 @@
 import Layout from "@/components/Layout";
 import Hero from "./Hero";
-
-type Vehicle = {
-  image: string;
-  vehicle: string;
-  name: string;
-  description: string;
-  range: string;
-  top_speed: string;
-  mph: string;
-  slug: string;
-};
+import Details from "./Details";
+import Showcase from "../HomePage/Showcase";
+import { Vehicle } from "@/types/vehicle";
 
 type VehiclePageProps = {
   vehicle: Vehicle;
@@ -20,6 +12,8 @@ const VehiclePage = ({ vehicle }: VehiclePageProps) => {
   return (
     <Layout>
       <Hero />
+      <Details vehicle={vehicle} />
+      <Showcase />
     </Layout>
   );
 };
