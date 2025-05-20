@@ -114,7 +114,7 @@ const Reviews = () => {
 
           <Marquee className="mt-12" gradient gradientColor="#F5F5F5" autoFill>
             {brands.map((item) => (
-              <div className="mr-20 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 ease-in-out">
+              <div className="animate mr-20 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 ease-in-out">
                 {item}
               </div>
             ))}
