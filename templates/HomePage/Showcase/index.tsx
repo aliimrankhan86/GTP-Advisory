@@ -1,8 +1,38 @@
+"use client";
+
 import Button from "@/components/Button";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Showcase = () => {
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.utils.toArray<HTMLElement>(".animate").forEach((el) => {
+        gsap.from(el, {
+          autoAlpha: 0,
+          scale: 0.96,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+      });
+    },
+    { scope: container },
+  );
+
   return (
     <div
+      ref={container}
       className="relative overflow-hidden h-[800px] bg-white bg-cover bg-center"
       style={{ backgroundImage: "url('/images/cover.webp')" }}
     >
@@ -28,11 +58,11 @@ const Showcase = () => {
             </p>
 
             <div className="mt-8 flex gap-x-2">
-              <Button primary icon="arrow-right">
+              <Button className="animate" primary icon="arrow-right">
                 Get Started
               </Button>
               <Button
-                className="text-white border-white/12 hover:border-white"
+                className="animate text-white border-white/12 hover:border-white"
                 stroke
               >
                 Get In Touch

@@ -5,6 +5,7 @@ import Highlights from "./Highlights";
 import Vehicles from "./Vehicles";
 import Features from "./Features";
 import Showcase from "./Showcase";
+import Reviews from "./Reviews";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Vehicles />
       <Features />
       <Showcase />
+      <Reviews />
     </Layout>
   );
 };

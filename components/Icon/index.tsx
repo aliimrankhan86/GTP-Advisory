@@ -11,6 +11,7 @@ import {
   CaretDown,
   X,
   Play,
+  Star,
 } from "@phosphor-icons/react";
 
 type IconsType = {
@@ -24,6 +25,7 @@ const icons: IconsType = {
   "caret-down": CaretDown,
   close: X,
   play: Play,
+  star: Star,
   instagram: InstagramLogo,
   facebook: FacebookLogo,
   twitter: TwitterLogo,
