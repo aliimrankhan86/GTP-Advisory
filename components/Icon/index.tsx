@@ -15,6 +15,12 @@ import {
   MapPin,
   Phone,
   EnvelopeSimple,
+  Lightning,
+  Brain,
+  ShieldCheckered,
+  Handshake,
+  Globe,
+  Rocket,
 } from "@phosphor-icons/react";
 
 type IconsType = {
@@ -32,6 +38,12 @@ const icons: IconsType = {
   location: MapPin,
   phone: Phone,
   email: EnvelopeSimple,
+  lightning: Lightning,
+  brain: Brain,
+  shield: ShieldCheckered,
+  handshake: Handshake,
+  globe: Globe,
+  rocket: Rocket,
   instagram: InstagramLogo,
   facebook: FacebookLogo,
   twitter: TwitterLogo,
