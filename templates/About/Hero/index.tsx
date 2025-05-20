@@ -43,7 +43,7 @@ const Hero = () => {
             >
               HOME
             </Link>
-            <Icon name="arrow-right" className="animate lime-green-300" />
+            <Icon name="arrow-right" color="white" />
             <div className="animate font-figtree font-medium text-sm tracking-[.12em] uppercase text-lime-300">
               ABOUT US
             </div>
