@@ -1,8 +1,8 @@
 export const socials = [
-  { name: "facebook", link: "https://facebook.com" },
-  { name: "instagram", link: "https://instagram.com" },
-  { name: "twitter", link: "https://x.com" },
-  { name: "threads", link: "https://threads.net" },
+  { name: "Facebook", icon: "facebook", link: "https://facebook.com" },
+  { name: "Instagram", icon: "instagram", link: "https://instagram.com" },
+  { name: "Twitter", icon: "twitter", link: "https://x.com" },
+  { name: "Threads", icon: "threads", link: "https://threads.net" },
 ];
 
 export const quick_links = [
