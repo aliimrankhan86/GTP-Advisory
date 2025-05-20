@@ -1,9 +1,30 @@
+"use client";
+
 import Icon from "@/components/Icon";
 import Link from "next/link";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.from(".animate", {
+        autoAlpha: 0,
+        scale: 0.96,
+        duration: 1.2,
+        stagger: 0.25,
+        ease: "power2.out",
+      });
+    },
+    { scope: container },
+  );
+
   return (
     <div
+      ref={container}
       className="relative overflow-hidden bg-white h-[600px] py-24 bg-cover bg-center sm:py-32"
       style={{ backgroundImage: "url('/images/about.webp')" }}
     >
@@ -22,7 +43,7 @@ const Hero = () => {
             >
               HOME
             </Link>
-            <Icon name="arrow-right" className="lime-green-300" />
+            <Icon name="arrow-right" className="animate lime-green-300" />
             <div className="animate font-figtree font-medium text-sm tracking-[.12em] uppercase text-lime-300">
               ABOUT US
             </div>
@@ -31,6 +52,7 @@ const Hero = () => {
       </div>
     </div>
   );
+  r;
 };
 
 export default Hero;
