@@ -1,10 +1,39 @@
+"use client";
+
 import Icon from "@/components/Icon";
 import { members } from "@/mocks/members";
 import Image from "next/image";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Team = () => {
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.utils.toArray<HTMLElement>(".animate").forEach((el) => {
+        gsap.from(el, {
+          autoAlpha: 0,
+          scale: 0.96,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+      });
+    },
+    { scope: container },
+  );
+
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32">
+    <div ref={container} className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
@@ -17,7 +46,7 @@ const Team = () => {
 
         <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3 lg:mt-20">
           {members.slice(0, 3).map((item) => (
-            <div key={item.name}>
+            <div key={item.name} className="animate">
               <div className="group overflow-hidden animate relative w-full h-96">
                 <Image
                   src={item.image}
