@@ -8,7 +8,7 @@ type Vehicle = {
   range: string;
   top_speed: string;
   mph: string;
-  slug: "string";
+  slug: string;
 };
 
 type VehicleProps = {

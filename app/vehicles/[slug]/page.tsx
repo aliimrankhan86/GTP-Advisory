@@ -1,5 +1,6 @@
 import { vehicles } from "@/mocks/vehicles";
 import VehiclePage from "@/templates/Vehicle";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -10,7 +11,9 @@ export default async function Page({
 
   const vehicle = vehicles.find((vehicle) => vehicle.slug === slug);
 
-  console.log("Vehicle", vehicle);
+  if (!vehicle) {
+    notFound();
+  }
 
   return <VehiclePage vehicle={vehicle} />;
 }
