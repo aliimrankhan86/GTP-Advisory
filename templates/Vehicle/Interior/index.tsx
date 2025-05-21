@@ -1,9 +1,41 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { interior_images } from "@/mocks/vehicle";
 import Image from "next/image";
 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const Interior = () => {
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.utils.toArray<HTMLElement>(".animate").forEach((el) => {
+        gsap.from(el, {
+          autoAlpha: 0,
+          scale: 0.96,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+      });
+    },
+    { scope: container },
+  );
+
   return (
-    <div className="overflow-hidden bg-neutral-100 py-24 sm:py-32">
+    <div
+      ref={container}
+      className="overflow-hidden bg-neutral-100 py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
