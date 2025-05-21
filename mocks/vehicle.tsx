@@ -95,3 +95,30 @@ export const vehicle_highlights = [
     ],
   },
 ];
+
+export const interior_images = [
+  {
+    alt: "Chair Image",
+    image: "/images/chair.webp",
+  },
+  {
+    alt: "Interior Image",
+    image: "/images/interior.webp",
+  },
+  {
+    alt: "Shift Image",
+    image: "/images/shift.webp",
+  },
+  {
+    alt: "Pedals Image",
+    image: "/images/pedals.webp",
+  },
+  {
+    alt: "Cluster Image",
+    image: "/images/cluster.webp",
+  },
+  {
+    alt: "Station Image",
+    image: "/images/station.webp",
+  },
+];
