@@ -2,7 +2,6 @@
 
 import { useState, useRef } from "react";
 import Icon from "@/components/Icon";
-import { faqs } from "@/mocks/faqs";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -22,9 +21,16 @@ type FaqsProps = {
     title: string;
     items: FaqItem[];
   };
+  showMarquee?: boolean;
+  gradientColor?: string;
 };
 
-const Faqs = ({ className, section }: FaqsProps) => {
+const Faqs = ({
+  className,
+  section,
+  showMarquee,
+  gradientColor,
+}: FaqsProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleFaq = (index: any) => {
@@ -101,13 +107,18 @@ const Faqs = ({ className, section }: FaqsProps) => {
           </div>
         </div>
 
-        {section.title === "Ownership & Support" && (
+        {(section.title === "Ownership & Support" || showMarquee) && (
           <div className="mt-12 mx-auto max-w-4xl flex flex-col justify-center text-center lg:mt-20">
             <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
               TRUSTED BY FORWARD-THINKING COMPANIES
             </div>
 
-            <Marquee className="mt-12" gradient gradientColor="white" autoFill>
+            <Marquee
+              className="mt-12"
+              gradient
+              gradientColor={gradientColor}
+              autoFill
+            >
               {brands.map((item) => (
                 <div className="animate mr-20 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 ease-in-out">
                   {item}

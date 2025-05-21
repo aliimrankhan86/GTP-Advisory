@@ -6,6 +6,7 @@ import Vision from "./Vision";
 import Showcase from "../HomePage/Showcase";
 import Team from "./Team";
 import Faqs from "../HomePage/Faqs";
+import { faqs } from "@/mocks/faqs";
 
 const AboutPage = () => {
   return (
@@ -16,7 +17,7 @@ const AboutPage = () => {
       <Vision />
       <Showcase />
       <Team />
-      <Faqs />
+      <Faqs section={faqs[0]} showMarquee={true} gradientColor="#F5F5F5" />
     </Layout>
   );
 };
