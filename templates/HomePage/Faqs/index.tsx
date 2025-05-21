@@ -108,7 +108,7 @@ const Faqs = ({
         </div>
 
         {(section.title === "Ownership & Support" || showMarquee) && (
-          <div className="mt-12 mx-auto max-w-4xl flex flex-col justify-center text-center lg:mt-20">
+          <div className="mt-20 mx-auto max-w-4xl flex flex-col justify-center text-center">
             <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
               TRUSTED BY FORWARD-THINKING COMPANIES
             </div>
