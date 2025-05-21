@@ -12,9 +12,9 @@ import Ticker from "@/components/Ticker";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 type ReviewsProps = {
-  className: string;
-  cardBackground: string;
-  gradientColor: string;
+  className?: string;
+  cardBackground?: string;
+  gradientColor?: string;
 };
 
 const Reviews = ({
