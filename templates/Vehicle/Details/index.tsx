@@ -54,13 +54,13 @@ const Details = ({ vehicle }: DetailsProps) => {
 
         <div className="mt-12 flex flex-col justify-between gap-12 lg:mt-20 lg:flex-row lg:items-center">
           <div className="max-w-xl">
-            <div className="font-onest font-medium text-2xl text-neutral-950">
+            <div className="animate font-onest font-medium text-2xl text-neutral-950">
               Dual-motor power, adaptive dynamics, and zero-emission performance
               come together to deliver lightning-fast acceleration and seamless
               connectivity, elevating every drive and redefining the electric
               experience.
             </div>
-            <div className="mt-6 font-figtree text-base text-neutral-500">
+            <div className="animate mt-6 font-figtree text-base text-neutral-500">
               With explosive acceleration, razor-sharp handling, and advanced
               driver intelligence, Velocity X turns every drive into an
               experience. It’s performance you can feel—without the carbon
@@ -69,10 +69,10 @@ const Details = ({ vehicle }: DetailsProps) => {
           </div>
 
           <div>
-            <div className="font-figtree uppercase text-sm text-neutral-500">
+            <div className="animate font-figtree uppercase text-sm text-neutral-500">
               STARTS FROM
             </div>
-            <div className="mt-4 font-onest font-medium text-5xl text-neutral-950 lg:text-7xl">
+            <div className="animate mt-4 font-onest font-medium text-5xl text-neutral-950 lg:text-7xl">
               $68,000
             </div>
           </div>
@@ -84,13 +84,13 @@ const Details = ({ vehicle }: DetailsProps) => {
               key={`section-${index}`}
               className="py-16 first:pt-0 last:pb-0"
             >
-              <div className="font-onest font-medium text-2xl text-neutral-950">
+              <div className="animate font-onest font-medium text-2xl text-neutral-950">
                 {section.title}
               </div>
 
               <div className="mt-8 grid grid-cols-1 gap-x-20 gap-y-12 lg:grid-cols-4">
                 {section.items.map((item) => (
-                  <div key={item.name}>
+                  <div key={item.name} className="animate">
                     <div className="font-figtree text-base text-neutral-500">
                       {item.label}
                     </div>
