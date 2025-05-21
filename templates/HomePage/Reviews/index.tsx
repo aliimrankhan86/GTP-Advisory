@@ -7,12 +7,21 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Marquee from "react-fast-marquee";
-import { brands } from "@/mocks/brands";
+import Ticker from "@/components/Ticker";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const Reviews = () => {
+type ReviewsProps = {
+  className: string;
+  cardBackground: string;
+  gradientColor: string;
+};
+
+const Reviews = ({
+  className,
+  cardBackground = "bg-white",
+  gradientColor = "#F5F5F5",
+}: ReviewsProps) => {
   const container = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -37,7 +46,7 @@ const Reviews = () => {
   return (
     <div
       ref={container}
-      className="bg-neutral-100 overflow-hidden py-24 sm:py-32"
+      className={`bg-neutral-100 overflow-hidden py-24 sm:py-32 ${className}`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -51,7 +60,7 @@ const Reviews = () => {
 
         <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-8 lg:mt-20 lg:grid-cols-3">
           {reviews.map((item) => (
-            <div key={item.title} className="animate bg-white p-10">
+            <div key={item.title} className={`animate p-10 ${cardBackground}`}>
               <div className="flex flex-col divide-y divide-neutral-200">
                 <div className="pb-8 flex items-center justify-between">
                   <div className="flex gap-1">
@@ -112,13 +121,7 @@ const Reviews = () => {
             TRUSTED BY FORWARD-THINKING COMPANIES
           </div>
 
-          <Marquee className="mt-12" gradient gradientColor="#F5F5F5" autoFill>
-            {brands.map((item) => (
-              <div className="animate mr-20 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 ease-in-out">
-                {item}
-              </div>
-            ))}
-          </Marquee>
+          <Ticker gradientColor={gradientColor} />
         </div>
       </div>
     </div>
