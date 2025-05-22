@@ -21,6 +21,7 @@ import {
   Handshake,
   Globe,
   Rocket,
+  Check,
 } from "@phosphor-icons/react";
 
 type IconsType = {
@@ -44,6 +45,7 @@ const icons: IconsType = {
   handshake: Handshake,
   globe: Globe,
   rocket: Rocket,
+  check: Check,
   instagram: InstagramLogo,
   facebook: FacebookLogo,
   twitter: TwitterLogo,
