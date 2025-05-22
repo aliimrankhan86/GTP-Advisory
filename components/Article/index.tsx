@@ -11,13 +11,16 @@ const Article = ({ item, className }: ArticleProps) => {
   return (
     <div className={`${className}`}>
       <Link key={item.id} href={`/news/${item.id}`}>
-        <div className="relative w-full h-80">
-          <Image
-            src={item.image}
-            alt="About Image"
-            objectFit="cover"
-            layout="fill"
-          />
+        <div className="relative w-full h-80 overflow-hidden group">
+          <div className="w-full h-full transition-transform duration-700 ease-out transform group-hover:scale-105 group-hover:rotate-3">
+            <Image
+              src={item.image}
+              alt="About Image"
+              layout="fill"
+              objectFit="cover"
+              className="object-cover"
+            />
+          </div>
         </div>
       </Link>
 
