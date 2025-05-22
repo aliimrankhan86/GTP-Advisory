@@ -22,7 +22,7 @@ const all_pages = [
   { name: "Pricing", href: "/pricing" },
   { name: "Reviews", href: "/reviews" },
   { name: "Team", href: "/team" },
-  { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "/news" },
   { name: "Single Post", href: "/blog/post" },
   { name: "404 Page", href: "/404" },
 ];
