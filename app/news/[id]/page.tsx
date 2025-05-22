@@ -10,7 +10,5 @@ export default async function Article({
 
   const articleData = await getArticleData(id);
 
-  console.log(articleData);
-
   return <PostPage article={articleData} />;
 }

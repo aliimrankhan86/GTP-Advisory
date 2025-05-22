@@ -23,7 +23,7 @@ const all_pages = [
   { name: "Reviews", href: "/reviews" },
   { name: "Team", href: "/team" },
   { name: "Blog", href: "/news" },
-  { name: "Single Post", href: "/blog/post" },
+  { name: "Single Post", href: "/news/why-sustainability" },
   { name: "404 Page", href: "/404" },
 ];
 
