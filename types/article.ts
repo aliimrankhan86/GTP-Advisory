@@ -5,5 +5,5 @@ export interface Article {
   date: string;
   title: string;
   description: string;
-  contentHtml: string;
+  contentHtml?: string;
 }
