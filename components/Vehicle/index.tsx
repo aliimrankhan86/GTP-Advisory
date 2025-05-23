@@ -56,7 +56,7 @@ const Vehicle = ({ vehicle, detailPage }: Vehicle) => {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
 
-      <div className="relative z-20 flex h-full flex-col items-center justify-end py-12 px-6 lg:py-20">
+      <div className="relative z-20 flex h-full flex-col items-center justify-end text-center py-12 px-6 lg:py-20">
         <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-lime-300">
           VEHICLE — {vehicle.vehicle}
         </div>
