@@ -67,34 +67,30 @@ const Vehicle = ({ vehicle, detailPage }: Vehicle) => {
           {vehicle.description}
         </p>
 
-        {!detailPage && (
-          <div className="hidden mt-8 grid-cols-2 gap-y-6 lg:grid lg:grid-flow-col-dense">
-            <div className="animate text-center border-r px-6 border-white/12 lg:px-8">
-              <div className="font-onest text-xl font-medium text-white">
-                {vehicle.range}
-              </div>
-              <div className="mt-2 font-figtree text-sm text-white">Range</div>
+        <div className="hidden mt-8 grid-cols-2 gap-y-6 lg:grid lg:grid-flow-col-dense">
+          <div className="animate text-center border-r px-6 border-white/12 lg:px-8">
+            <div className="font-onest text-xl font-medium text-white">
+              {vehicle.range}
             </div>
+            <div className="mt-2 font-figtree text-sm text-white">Range</div>
+          </div>
 
-            <div className="animate text-center px-6 lg:px-8">
-              <div className="font-onest text-xl font-medium text-white">
-                {vehicle.top_speed}
-              </div>
-              <div className="mt-2 font-figtree text-sm text-white">
-                Top Speed
-              </div>
+          <div className="animate text-center px-6 lg:px-8">
+            <div className="font-onest text-xl font-medium text-white">
+              {vehicle.top_speed}
             </div>
-
-            <div className="animate col-span-2 text-center border-t pt-6 border-white/12 lg:border-l lg:border-t-0 lg:pt-0 lg:pl-8">
-              <div className="font-onest text-xl font-medium text-white">
-                {vehicle.mph}
-              </div>
-              <div className="mt-2 font-figtree text-sm text-white">
-                0-60 mph
-              </div>
+            <div className="mt-2 font-figtree text-sm text-white">
+              Top Speed
             </div>
           </div>
-        )}
+
+          <div className="animate col-span-2 text-center border-t pt-6 border-white/12 lg:border-l lg:border-t-0 lg:pt-0 lg:pl-8">
+            <div className="font-onest text-xl font-medium text-white">
+              {vehicle.mph}
+            </div>
+            <div className="mt-2 font-figtree text-sm text-white">0-60 mph</div>
+          </div>
+        </div>
 
         <div className="mt-8 flex items-center gap-x-4">
           {detailPage ? (
