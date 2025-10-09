@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
+import LoginGatedButton from "@/components/LoginGatedButton";
 import Image from "next/image";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -38,31 +39,27 @@ const About = () => {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-24 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="animate relative w-full h-96 lg:h-[700px]">
             <Image
-              src="/images/intro.webp"
-              alt="About Image"
-              objectFit="cover"
-              layout="fill"
+              src="/images/green-voice.png"
+              alt="AI Voice Intelligence"
+              fill
+              style={{ objectFit: "contain" }}
             />
           </div>
 
           <div className="flex flex-col items-start">
-            <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-              INTRODUCTION
-            </div>
             <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
-              0 Emissions, 100% Thrill
+              Powering the Agency4 AI Revolution
             </h1>
 
             <p className="animate mt-12 font-figtree text-lg text-neutral-500 lg:mt-auto">
-              Feel the instant torque, razor-sharp handling, and silent
-              acceleration—without leaving a carbon footprint. This is pure
-              driving excitement, electrified.
+              Agency4 engineers AI ecosystems that connect every layer of your organisation from workflows to voice and data.
+              By combining real-time reasoning, adaptive learning and seamless integration, our technology eliminates bottlenecks and amplifies performance. What once required teams and tools now runs autonomously, intelligently, and at scale.
             </p>
 
             <div className="animate mt-8">
-              <Button as="link" href="/about" secondary icon="arrow-right">
+              <LoginGatedButton secondary icon="arrow-right">
                 Learn More
-              </Button>
+              </LoginGatedButton>
             </div>
           </div>
         </div>

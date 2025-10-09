@@ -1,31 +1,31 @@
 export const faqs = [
   {
-    title: "Got questions? We’ve got answers",
+    title: "Frequently Asked Questions",
     items: [
       {
-        question: "What is an electric vehicle (EV)?",
+        question: "What is agency4?",
         answer:
-          "An electric vehicle is powered entirely by electricity using a rechargeable battery and electric motor, producing zero tailpipe emissions.",
+          "A full-spectrum AI partner: we plan, build, integrate, and scale systems for automation, agents, analytics, and transformation.",
       },
       {
-        question: "Is it more expensive to own an EV?",
+        question: "Is AI implementation costly?",
         answer:
-          "While EVs can have a higher upfront cost, they offer lower operating expenses over time due to reduced fuel and maintenance costs.",
+          "We begin with small pilots, deliver fast value, and scale in alignment with growth. Many clients recoup quickly.",
       },
       {
-        question: "How safe are electric vehicles?",
+        question: "How do you ensure safety?",
         answer:
-          "EVs meet or exceed safety standards and include advanced features like automatic emergency braking and battery fire protection systems.",
+          "Every AI solution has audit layers, guardrails, monitoring and transparent oversight.",
       },
       {
-        question: "Can I drive an EV in the rain or through a car wash?",
+        question: "Will it fit with my tech stack?",
         answer:
-          "Yes, electric vehicles are designed to be safe in all weather conditions, including rain and car washes.",
+          "Yes — our modules are designed to slot in without replacing your existing systems.",
       },
       {
-        question: "Do EVs perform well in cold weather?",
+        question: "Can it scale under demand?",
         answer:
-          "EVs do work in cold weather, though battery range can decrease. Pre-conditioning and thermal battery management help optimize performance.",
+          "Absolutely. Our infrastructure adjusts to load, maintaining responsiveness and precision.",
       },
     ],
   },

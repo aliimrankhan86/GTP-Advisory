@@ -14,8 +14,11 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Voltz",
+  title: "Agency4 - Your AI Partner",
   description: "The Electric Car UI Template",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

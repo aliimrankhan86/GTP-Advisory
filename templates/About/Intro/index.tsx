@@ -59,8 +59,8 @@ const Intro = () => {
             <Image
               src="/images/intro.webp"
               alt="Intro Image"
-              objectFit="cover"
-              layout="fill"
+              fill
+              style={{ objectFit: "cover" }}
             />
           </div>
 

@@ -1,9 +1,6 @@
 "use client";
 
-import Icon from "@/components/Icon";
-import { features } from "@/mocks/features";
-import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -12,8 +9,6 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Features = () => {
   const container = useRef<HTMLDivElement>(null);
-
-  const [videoOpen, setVideoOPen] = useState(false);
 
   useGSAP(
     () => {
@@ -40,80 +35,94 @@ const Features = () => {
       className="overflow-hidden bg-neutral-100 py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-          CORE FEATURES
-        </div>
         <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
-          Pure Electric Precision
+          AI in Action
         </h1>
         <p className="animate mt-4 max-w-3xl font-figtree text-lg text-neutral-500">
-          From battery breakthroughs to AI-enhanced safety, every feature is
-          designed to elevate your experience behind the wheel.
+          From automation to intelligent communication, every capability is designed to help businesses operate faster, engage customers naturally, and scale with confidence using Agency4's applied AI.
         </p>
 
-        <dl className="mt-12 grid grid-cols-1 gap-8 lg:mt-20 lg:grid-cols-4">
-          <div className="animate relative overflow-hidden lg:col-span-2">
-            <div className="relative w-full h-80 lg:h-full">
-              <Image
-                src="/images/racing.webp"
-                alt="About Image"
-                objectFit="cover"
-                layout="fill"
-              />
+        <div className="mt-12 grid grid-cols-1 gap-8 lg:mt-20 lg:grid-cols-2">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div className="animate bg-white p-8 rounded-2xl">
+              <div className="font-figtree text-xs text-neutral-500 uppercase tracking-wide mb-3">
+                AUTOMATED WORKFLOWS
+              </div>
+              <h3 className="font-onest text-2xl font-medium text-neutral-950 mb-4">
+                AI automation that removes repetitive tasks
+              </h3>
+              <p className="font-figtree text-base text-neutral-600">
+                Smart, integrated systems automate your everyday operations, saving hours and reducing errors across workflows.
+              </p>
             </div>
 
-            <button
-              onClick={() => setVideoOPen(true)}
-              className="absolute inset-0 flex items-center justify-center cursor-pointer"
-              aria-label="Play video"
-            >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-lime-300 hover:bg-white transition">
-                <Icon name="play" weight="fill" color="text-black" />
+            <div className="animate bg-white p-8 rounded-2xl">
+              <div className="font-figtree text-xs text-neutral-500 uppercase tracking-wide mb-3">
+                VOICE AGENTS
               </div>
-            </button>
+              <h3 className="font-onest text-2xl font-medium text-neutral-950 mb-4">
+                Conversational AI that speaks your brand
+              </h3>
+              <p className="font-figtree text-base text-neutral-600">
+                Human-like voice agents deliver real-time, multilingual assistance for sales, support, and onboarding.
+              </p>
+            </div>
+
+            <div className="animate bg-white p-8 rounded-2xl">
+              <div className="font-figtree text-xs text-neutral-500 uppercase tracking-wide mb-3">
+                CHATBOTS THAT THINK
+              </div>
+              <h3 className="font-onest text-2xl font-medium text-neutral-950 mb-4">
+                Chatbots powered by advanced reasoning
+              </h3>
+              <p className="font-figtree text-base text-neutral-600">
+                Responsive, context-aware chatbots engage users instantly and handle complex conversations with ease.
+              </p>
+            </div>
           </div>
 
-          {features.map((item) => (
-            <div key={item.name} className="animate bg-white p-8">
-              <dt className="font-figtree text-xs text-neutral-500 uppercase">
-                {item.label}
-              </dt>
-              <dt className="mt-2 font-onest text-2xl font-medium text-neutral-950">
-                {item.name}
-              </dt>
-              <dd className="mt-20 font-figtree text-base text-neutral-500">
-                {item.description}
-              </dd>
+          {/* Right Column */}
+          <div className="space-y-8">
+            <div className="animate bg-white p-8 rounded-2xl">
+              <div className="font-figtree text-xs text-neutral-500 uppercase tracking-wide mb-3">
+                AI-POWERED EMAILS
+              </div>
+              <h3 className="font-onest text-2xl font-medium text-neutral-950 mb-4">
+                Personalised communication at scale
+              </h3>
+              <p className="font-figtree text-base text-neutral-600">
+                Generate, send, and optimise messages that adapt to tone, intent, and customer behaviour automatically.
+              </p>
             </div>
-          ))}
-        </dl>
-      </div>
 
-      {videoOpen && (
-        <div
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center"
-          onClick={() => setVideoOPen(false)}
-        >
-          <div
-            className="relative w-full max-w-3xl aspect-video"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <iframe
-              src="https://www.youtube.com/embed/MhVpNSC9zR8?si=nPpUFZdj9taGU_0Q"
-              title="Demo Video"
-              className="w-full h-full rounded-xl"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            />
-            <button
-              className="absolute top-4 right-4 text-white text-2xl"
-              onClick={() => setVideoOPen(false)}
-            >
-              ✕
-            </button>
+            <div className="animate bg-white p-8 rounded-2xl">
+              <div className="font-figtree text-xs text-neutral-500 uppercase tracking-wide mb-3">
+                PREDICTIVE INSIGHTS
+              </div>
+              <h3 className="font-onest text-2xl font-medium text-neutral-950 mb-4">
+                Data-driven intelligence for better decisions
+              </h3>
+              <p className="font-figtree text-base text-neutral-600">
+                Turn raw data into actionable insights using predictive models built to enhance accuracy and business agility.
+              </p>
+            </div>
+
+            <div className="animate bg-white p-8 rounded-2xl">
+              <div className="font-figtree text-xs text-neutral-500 uppercase tracking-wide mb-3">
+                SEAMLESS INTEGRATION
+              </div>
+              <h3 className="font-onest text-2xl font-medium text-neutral-950 mb-4">
+                Built to fit your existing ecosystem
+              </h3>
+              <p className="font-figtree text-base text-neutral-600">
+                Our AI solutions integrate smoothly with your CRM, website, and communication tools, ready for immediate impact.
+              </p>
+            </div>
           </div>
         </div>
-      )}
+      </div>
+
     </div>
   );
 };

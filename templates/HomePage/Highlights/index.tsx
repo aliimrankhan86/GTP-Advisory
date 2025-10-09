@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
+import LoginGatedButton from "@/components/LoginGatedButton";
 import Image from "next/image";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -35,28 +36,24 @@ const Highlights = () => {
     <div ref={container} className="overflow-hidden bg-white">
       <div className="bg-neutral-100 grid grid-cols-1 items-center lg:grid-cols-2">
         <div className="py-12 px-6 lg:py-32 lg:px-32">
-          <span className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-            01 — 03
-          </span>
           <h2 className="animate mt-4 font-onest text-4xl leading-[1.2] text-neutral-950 font-medium lg:text-5xl">
-            Ultra-Fast Charging
+            Launch Intelligence, Scale Effortlessly
           </h2>
           <p className="animate mt-4 font-figtree text-lg text-neutral-500">
-            Recharge up to 80% in just 20 minutes. Our advanced battery system
-            is built for speed, safety, and long-range confidence—perfect for
-            daily drives or long journeys.
+            Bring your AI vision to life in record time.
+            From rapid proof-of-concept to scalable production systems, Agency4 empowers teams to deploy intelligent solutions that evolve, adapt, and outperform expectations.
           </p>
           <div className="animate mt-6">
-            <Button stroke>Learn More</Button>
+            <LoginGatedButton stroke>Learn More</LoginGatedButton>
           </div>
         </div>
 
         <div className="animate relative w-full h-96 lg:h-[700px]">
           <Image
-            src="/images/ultra-fast-charging.webp"
-            alt="Ultra fast charging"
-            objectFit="cover"
-            layout="fill"
+            src="/images/Green-AI-future.png"
+            alt="AI Future Interface"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </div>
       </div>
@@ -64,55 +61,47 @@ const Highlights = () => {
       <div className="bg-neutral-900 grid grid-cols-1 items-center lg:grid-cols-2">
         <div className="animate order-2 relative w-full h-96 lg:h-[700px] lg:order-1">
           <Image
-            src="/images/precision-handling.webp"
-            alt="Ultra fast charging"
-            objectFit="cover"
-            layout="fill"
+            src="/images/ai-coder-new-v2.jpg"
+            alt="AI Developer"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </div>
 
         <div className="order-1 py-12 px-6 lg:py-32 lg:px-32 lg:order-2">
-          <span className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-lime-300">
-            02 — 03
-          </span>
           <h2 className="animate mt-4 font-onest text-4xl leading-[1.2] text-white font-medium lg:text-5xl">
-            Precision Handling
+            From Idea to Intelligence
           </h2>
           <p className="animate mt-4 font-figtree text-lg text-neutral-400">
-            A low center of gravity and adaptive suspension deliver razor-sharp
-            control and a smooth, balanced ride in any environment—city,
-            highway, or winding roads.
+            Turn imagination into innovation.
+            Our AI frameworks transform complex ideas into real-world applications, combining strategy, automation, and advanced learning models to deliver measurable impact from day one.
           </p>
           <div className="animate mt-6">
-            <Button primary>Learn More</Button>
+            <LoginGatedButton primary>Discover More</LoginGatedButton>
           </div>
         </div>
       </div>
 
       <div className="bg-lime-300 grid grid-cols-1 items-center lg:grid-cols-2">
         <div className="py-12 px-6 lg:py-32 lg:px-32">
-          <span className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-            03 — 03
-          </span>
           <h2 className="animate mt-4 font-onest text-4xl leading-[1.2] text-neutral-950 font-medium lg:text-5xl">
-            Driver Assist AI
+            Seamless AI Integration
           </h2>
           <p className="animate mt-4 font-figtree text-lg text-neutral-900">
-            Real-time sensors and intelligent software enhance safety with
-            features like adaptive cruise control, auto lane assist, and
-            predictive collision response.
+            Connect intelligence across every system, channel, and workflow.
+            Agency4's modular AI infrastructure fits perfectly into your environment, uniting automation, analytics, and communication into a single intelligent network.
           </p>
           <div className="animate mt-6">
-            <Button secondary>Learn More</Button>
+            <LoginGatedButton secondary>Explore Integration</LoginGatedButton>
           </div>
         </div>
 
         <div className="animate relative w-full h-96 lg:h-[700px]">
           <Image
-            src="/images/driver-assist-ai.webp"
-            alt="Ultra fast charging"
-            objectFit="cover"
-            layout="fill"
+            src="/images/chatbubbles.png"
+            alt="AI Communication Network"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </div>
       </div>

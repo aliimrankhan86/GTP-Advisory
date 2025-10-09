@@ -33,7 +33,7 @@ const Hero = () => {
       <div className="relative z-10 mx-auto px-6 h-full flex flex-col justify-center items-center max-w-4xl">
         <div className="flex flex-col items-center max-w-4xl mx-auto">
           <div className="animate font-onest text-white font-medium text-5xl text-center leading-[1.2] md:text-8xl">
-            Our Vehicles
+            AI Solutions
           </div>
 
           <div className="mt-4 flex items-center gap-x-4">
@@ -47,7 +47,7 @@ const Hero = () => {
               <Icon name="arrow-right" />
             </div>
             <div className="animate font-figtree font-medium text-sm tracking-[.12em] uppercase text-lime-300">
-              VEHICLES
+              SOLUTIONS
             </div>
           </div>
         </div>

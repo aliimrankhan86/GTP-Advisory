@@ -1,17 +1,38 @@
+"use client";
+
 import Footer from "../Footer";
 import Header from "../Header";
+import LoginPrompt from "../LoginPrompt";
+import ConsultationModal from "../ConsultationModal";
+import { LoginGateProvider, useLoginGate } from "@/contexts/LoginGateContext";
+import { ConsultationProvider, useConsultation } from "@/contexts/ConsultationContext";
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const LayoutContent = ({ children }: LayoutProps) => {
+  const { isLoginPromptOpen, loginMode, closeLoginPrompt } = useLoginGate();
+  const { isConsultationModalOpen, closeConsultationModal } = useConsultation();
+
   return (
     <>
       <Header />
       {children}
       <Footer />
+      <LoginPrompt isOpen={isLoginPromptOpen} onClose={closeLoginPrompt} initialMode={loginMode} />
+      <ConsultationModal isOpen={isConsultationModalOpen} onClose={closeConsultationModal} />
     </>
+  );
+};
+
+const Layout = ({ children }: LayoutProps) => {
+  return (
+    <LoginGateProvider>
+      <ConsultationProvider>
+        <LayoutContent>{children}</LayoutContent>
+      </ConsultationProvider>
+    </LoginGateProvider>
   );
 };
 

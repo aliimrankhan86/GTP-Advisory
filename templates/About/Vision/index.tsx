@@ -48,8 +48,8 @@ const Vision = () => {
             <Image
               src="/images/driving.webp"
               alt="Driving Image"
-              objectFit="cover"
-              layout="fill"
+              fill
+              style={{ objectFit: "cover" }}
             />
           </div>
 
@@ -57,8 +57,8 @@ const Vision = () => {
             <Image
               src="/images/precision-handling.webp"
               alt="Precision Handling Image"
-              objectFit="cover"
-              layout="fill"
+              fill
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>

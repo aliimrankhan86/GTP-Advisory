@@ -60,14 +60,12 @@ const Faqs = ({
 
   return (
     <div
+      id="faq"
       ref={container}
       className={`overflow-hidden bg-neutral-100 py-24 sm:py-32 ${className}`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-            FAQ’S
-          </div>
           <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
             {section.title}
           </h1>
@@ -109,9 +107,6 @@ const Faqs = ({
 
         {(section.title === "Ownership & Support" || showMarquee) && (
           <div className="mt-20 mx-auto max-w-4xl flex flex-col justify-center text-center">
-            <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-              TRUSTED BY FORWARD-THINKING COMPANIES
-            </div>
 
             <Marquee
               className="mt-12"

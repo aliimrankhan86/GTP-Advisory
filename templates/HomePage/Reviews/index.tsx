@@ -45,16 +45,14 @@ const Reviews = ({
 
   return (
     <div
+      id="testimonials"
       ref={container}
       className={`bg-neutral-100 overflow-hidden py-24 sm:py-32 ${className}`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-            REVIEWS
-          </div>
           <h1 className="animate mt-4  font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
-            What Drivers Are Saying
+            What Clients Are Saying
           </h1>
         </div>
 
@@ -100,8 +98,8 @@ const Reviews = ({
                     <Image
                       src={item.reviewer_image}
                       alt="About Image"
-                      objectFit="cover"
-                      layout="fill"
+                      fill
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                   <div className="mt-4 font-figtree text-base font-medium text-neutral-950">
@@ -117,9 +115,6 @@ const Reviews = ({
         </div>
 
         <div className="mt-12 mx-auto max-w-4xl flex flex-col justify-center text-center lg:mt-20">
-          <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-            TRUSTED BY FORWARD-THINKING COMPANIES
-          </div>
 
           <Ticker gradientColor={gradientColor} />
         </div>

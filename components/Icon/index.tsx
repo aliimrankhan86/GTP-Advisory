@@ -23,6 +23,8 @@ import {
   Rocket,
   Check,
   DotOutline,
+  Eye,
+  EyeSlash,
 } from "@phosphor-icons/react";
 
 type IconsType = {
@@ -48,6 +50,8 @@ const icons: IconsType = {
   rocket: Rocket,
   check: Check,
   "dot-outline": DotOutline,
+  eye: Eye,
+  "eye-slash": EyeSlash,
   instagram: InstagramLogo,
   facebook: FacebookLogo,
   twitter: TwitterLogo,

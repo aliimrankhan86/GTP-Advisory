@@ -13,100 +13,49 @@ const Footer = () => {
             <div>
               <Logo />
               <div className="mt-4 font-figtree text-lg text-neutral-400">
-                Driving the future—one electric mile at a time.
+                Your Partner in Building an AI-Driven Future
               </div>
-            </div>
-
-            <div className="flex flex-col items-start">
-              <div className="max-w-xs font-onest font-medium text-2xl text-white">
-                Subscribe to our newsletter for exclusive updates.
-              </div>
-
-              <div className="mt-4 group w-full max-w-md flex p-2 border border-neutral-700 rounded-full transition-all duration-300 ease-in-out hover:border-white hover:bg-neutral-800 focus-within:border-white focus-within:bg-neutral-800 active:scale-[0.98] active:border-white active:bg-neutral-700">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full pl-4 bg-transparent font-figtree text-sm text-white placeholder:text-neutral-400 focus:outline-none"
-                />
-                <Button primary icon="arrow-right">
-                  <span className="hidden sm:inline">Subscribe</span>
-                </Button>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-x-2">
-              {socials.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group w-11 h-11 flex items-center justify-center border border-neutral-700 rounded-full text-white hover:bg-white hover:text-black transition-colors duration-300 ease-in-out"
-                >
-                  <Icon name={item.icon} weight="fill" />
-                </a>
-              ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-            <div>
-              <div className="font-onest font-medium text-xl text-white">
-                Quick Links
-              </div>
-
-              <div className="mt-8 flex flex-col gap-y-4">
-                {quick_links.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="font-figtree font-medium text-lg text-neutral-400 hover:text-white transition-colors duration-300 ease-in-out"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+          <div>
+            <div className="font-onest font-medium text-xl text-white">
+              Contact Us
             </div>
 
-            <div>
-              <div className="font-onest font-medium text-xl text-white">
-                Contact Us
+            <div className="mt-8 flex flex-col gap-6">
+              <div className="flex gap-4">
+                <Icon name="location" className="fill-lime-300" />
+                <div>
+                  <div className="font-figtree font-medium text-base text-white">
+                    Address
+                  </div>
+                  <div className="mt-2 font-figtree text-sm text-neutral-400">
+                    agency4, London, UK
+                  </div>
+                </div>
               </div>
 
-              <div className="mt-8 flex flex-col gap-6">
-                <div className="flex gap-4">
-                  <Icon name="location" className="fill-lime-300" />
-                  <div>
-                    <div className="font-figtree font-medium text-base text-white">
-                      Address
-                    </div>
-                    <div className="mt-2 font-figtree text-sm text-neutral-400">
-                      1024 Aurora Blvd, San Francisco, CA 94107
-                    </div>
+              <div className="flex gap-4">
+                <Icon name="phone" className="fill-lime-300" />
+                <div>
+                  <div className="font-figtree font-medium text-base text-white">
+                    Phone Number
+                  </div>
+                  <div className="mt-2 font-figtree text-sm text-neutral-400">
+                    +44 7762 206676
                   </div>
                 </div>
+              </div>
 
-                <div className="flex gap-4">
-                  <Icon name="phone" className="fill-lime-300" />
-                  <div>
-                    <div className="font-figtree font-medium text-base text-white">
-                      Phone Number
-                    </div>
-                    <div className="mt-2 font-figtree text-sm text-neutral-400">
-                      +1 (415) 555-0199
-                    </div>
+              <div className="flex gap-4">
+                <Icon name="email" className="fill-lime-300" />
+                <div>
+                  <div className="font-figtree font-medium text-base text-white">
+                    Email
                   </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <Icon name="email" className="fill-lime-300" />
-                  <div>
-                    <div className="font-figtree font-medium text-base text-white">
-                      Address
-                    </div>
-                    <div className="mt-2 font-figtree text-sm text-neutral-400">
-                      support@voltz.com
-                    </div>
+                  <div className="mt-2 font-figtree text-sm text-neutral-400">
+                    info@agency4.ai
                   </div>
                 </div>
               </div>
@@ -119,7 +68,7 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col gap-6 items-center justify-between lg:flex-row">
             <div className="font-figtree text-base text-white">
-              © 2025 Capacitor Motors. All rights reserved.
+              © {new Date().getFullYear()} agency4 — All rights reserved
             </div>
 
             <div className="flex items-center gap-12">

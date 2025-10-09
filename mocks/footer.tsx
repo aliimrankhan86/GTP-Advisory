@@ -7,7 +7,7 @@ export const socials = [
 
 export const quick_links = [
   {
-    name: "Vehicles",
+    name: "Solutions",
     href: "/vehicles",
   },
   {
@@ -19,12 +19,12 @@ export const quick_links = [
     href: "/reviews",
   },
   {
-    name: "News",
+    name: "Insights",
     href: "/news",
   },
   {
     name: "FAQ",
-    href: "/faq",
+    href: "/faqs",
   },
   {
     name: "Contact",

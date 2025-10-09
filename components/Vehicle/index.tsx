@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Vehicle as VehicleType } from "@/types/vehicle";
 import Button from "../Button";
+import LoginGatedButton from "../LoginGatedButton";
 
 type Vehicle = {
   vehicle: VehicleType;
@@ -57,9 +58,6 @@ const Vehicle = ({ vehicle, detailPage }: Vehicle) => {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
 
       <div className="relative z-20 flex h-full flex-col items-center justify-end text-center py-12 px-6 lg:py-20">
-        <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-lime-300">
-          VEHICLE — {vehicle.vehicle}
-        </div>
         <h2 className="mt-4 font-onest text-4xl font-medium leading-[1.2] text-white lg:text-5xl">
           {vehicle.name}
         </h2>
@@ -67,44 +65,41 @@ const Vehicle = ({ vehicle, detailPage }: Vehicle) => {
           {vehicle.description}
         </p>
 
-        <div className="hidden mt-8 grid-cols-2 gap-y-6 lg:grid lg:grid-flow-col-dense">
+        <div className="hidden mt-8 grid-cols-3 gap-y-6 lg:grid">
           <div className="animate text-center border-r px-6 border-white/12 lg:px-8">
             <div className="font-onest text-xl font-medium text-white">
               {vehicle.range}
             </div>
-            <div className="mt-2 font-figtree text-sm text-white">Range</div>
+            <div className="mt-2 font-figtree text-sm text-white">
+              {vehicle.vehicle === "01" ? "Latency" : 
+               vehicle.vehicle === "02" ? "Execution" : 
+               "Forecasting"}
+            </div>
           </div>
 
-          <div className="animate text-center px-6 lg:px-8">
+          <div className="animate text-center border-r px-6 border-white/12 lg:px-8">
             <div className="font-onest text-xl font-medium text-white">
               {vehicle.top_speed}
             </div>
             <div className="mt-2 font-figtree text-sm text-white">
-              Top Speed
+              {vehicle.vehicle === "01" ? "Reach" : 
+               vehicle.vehicle === "02" ? "Reliability" : 
+               "Processing"}
             </div>
           </div>
 
-          <div className="animate col-span-2 text-center border-t pt-6 border-white/12 lg:border-l lg:border-t-0 lg:pt-0 lg:pl-8">
+          <div className="animate text-center px-6 lg:px-8">
             <div className="font-onest text-xl font-medium text-white">
               {vehicle.mph}
             </div>
-            <div className="mt-2 font-figtree text-sm text-white">0-60 mph</div>
+            <div className="mt-2 font-figtree text-sm text-white">
+              {vehicle.vehicle === "01" ? "Performance" : 
+               vehicle.vehicle === "02" ? "Deployment" : 
+               "Decision Support"}
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 flex items-center gap-x-4">
-          {detailPage ? (
-            <Button as="link" href="/contact" primary>
-              Order Now
-            </Button>
-          ) : (
-            <Button as="link" href={`/vehicles/${vehicle.slug}`} primary>
-              View Details
-            </Button>
-          )}
-
-          {!detailPage && <Button secondary>Order Now</Button>}
-        </div>
       </div>
     </div>
   );

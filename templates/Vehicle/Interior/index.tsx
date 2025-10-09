@@ -52,8 +52,8 @@ const Interior = () => {
               <Image
                 src={item.image}
                 alt={item.alt}
-                objectFit="cover"
-                layout="fill"
+              fill
+              style={{ objectFit: "cover" }}
               />
             </div>
           ))}

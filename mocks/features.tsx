@@ -1,38 +1,38 @@
 export const features = [
   {
-    label: "ALWAYS CONNECTED",
-    name: "5G. App control. Total sync.",
+    label: "AUTOMATED WORKFLOWS",
+    name: "AI automation that removes repetitive tasks",
     description:
-      "Control everything from your phone or voice—with wireless updates that evolve your car over time.",
+      "Smart, integrated systems automate your everyday operations saving hours and reducing errors across workflows.",
   },
   {
-    label: "NEXT-GEN SAFETY",
-    name: "360° awareness, zero compromise.",
+    label: "VOICE AGENTS",
+    name: "Conversational AI that speaks your brand",
     description:
-      "Smart sensors and AI monitor your surroundings to detect and prevent threats in real time.",
+      "Human-like voice agents deliver real-time, multilingual assistance for sales, support, and onboarding.",
   },
   {
-    label: "IMMERSIVE SOUND",
-    name: "Studio-quality audio, built in.",
+    label: "CHATBOTS THAT THINK",
+    name: "Chatbots powered by advanced reasoning",
     description:
-      "Enjoy crystal-clear sound with a premium surround system optimized for the silent EV cabin.",
+      "Responsive, context-aware chatbots engage users instantly and handle complex conversations with ease.",
   },
   {
-    label: "CLIMATE INTELLIGENCE",
-    name: "Comfort, customized.",
+    label: "AI-POWERED EMAILS",
+    name: "Personalised communication at scale",
     description:
-      "Adaptive zones and eco modes adjust to individual preferences while optimizing energy use.",
+      "Generate, send, and optimise messages that adapt to tone, intent, and customer behaviour automatically.",
   },
   {
-    label: "SMART NAVIGATION",
-    name: "Plan smarter routes.",
+    label: "PREDICTIVE INSIGHTS",
+    name: "Data-driven intelligence for better decisions",
     description:
-      "Real-time traffic, terrain, and charger data work together for efficient, low-stress travel.",
+      "Turn raw data into actionable insights using predictive models built to enhance accuracy and business agility.",
   },
   {
-    label: "CLEAN INTERIOR TECH",
-    name: "Wellness meets design.",
+    label: "SEAMLESS INTEGRATION",
+    name: "Built to fit your existing ecosystem",
     description:
-      "Air purification, hypoallergenic materials, and antimicrobial finishes create a cleaner cabin environment.",
+      "Our AI solutions integrate smoothly with your CRM, website, and communication tools ready for immediate impact.",
   },
 ];

@@ -16,6 +16,7 @@ import Button from "../Button";
 import Icon from "../Icon";
 import Link from "next/link";
 import Logo from "../Logo";
+import { useLoginGate } from "@/contexts/LoginGateContext";
 
 const all_pages = [
   { name: "Faq's", href: "/faqs" },
@@ -30,6 +31,7 @@ const all_pages = [
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { openLoginPrompt } = useLoginGate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,12 +42,39 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Handle deep linking with hash on page load
+    const hash = window.location.hash;
+    if (hash && ['#testimonials', '#faq', '#contact'].includes(hash)) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setMobileMenuOpen(false);
+    }
+  };
+
+  const handleLoginGatedClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openLoginPrompt();
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 border-b border-white/12 transition-all duration-300 ${
         scrolled && !mobileMenuOpen
           ? "backdrop-blur-md bg-black/60 shadow-md"
-          : "bg-transparent"
+          : "backdrop-blur-md bg-black/40"
       }`}
     >
       <nav
@@ -77,83 +106,37 @@ const Header = () => {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:items-center lg:gap-x-12">
-          <Link
-            href="/about"
+          <button
+            onClick={() => scrollToSection('testimonials')}
             className="font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity"
           >
-            About
-          </Link>
+            Testimonials
+          </button>
 
-          <Popover className="relative">
-            <PopoverButton className="focus:outline-none flex items-center gap-x-2 font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity">
-              Vehicles
-              <Icon aria-hidden="true" name="caret-down" />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-2xs overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="p-4">
-                <Link
-                  href="/vehicles"
-                  className="block gap-x-6 rounded-lg p-4 font-figtree text-sm font-medium text-gray-900 hover:bg-neutral-100 transition-colors"
-                >
-                  Vehicles
-                </Link>
-
-                <Link
-                  href="/vehicles/2025-ioniq-5"
-                  className="block gap-x-6 rounded-lg p-4 font-figtree text-sm font-medium text-gray-900 hover:bg-neutral-100 transition-colors"
-                >
-                  Vehicle Details
-                </Link>
-              </div>
-            </PopoverPanel>
-          </Popover>
-
-          <Popover className="relative">
-            <PopoverButton className="focus:outline-none flex items-center gap-x-2 font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity">
-              All Pages
-              <Icon aria-hidden="true" name="caret-down" />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-2xs overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="p-4">
-                {all_pages.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block gap-x-6 rounded-lg p-4 font-figtree text-sm font-medium text-gray-900 hover:bg-neutral-100 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </PopoverPanel>
-          </Popover>
-
-          <Link
-            href="/news"
+          <button
+            onClick={() => scrollToSection('contact')}
             className="font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity"
           >
-            News
-          </Link>
+            Contact
+          </button>
+
+          <button
+            onClick={() => scrollToSection('faq')}
+            className="font-figtree font-medium text-sm text-white opacity-80 hover:opacity-100 transition-opacity"
+          >
+            FAQ
+          </button>
         </PopoverGroup>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button
-            className="fill-white border-white/12 text-white hover:border-white"
-            as="link"
-            href="/contact"
-            icon="arrow-up-right"
-            stroke
-          >
-            Get In Touch
-          </Button>
+              <Button
+                className="fill-black border-lime-300 text-black hover:border-lime-400"
+                onClick={handleLoginGatedClick}
+                icon="arrow-up-right"
+                primary
+              >
+                Sign in
+              </Button>
         </div>
       </nav>
 
@@ -177,80 +160,35 @@ const Header = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-neutral-500/10">
               <div className="space-y-2 py-6">
-                <Link
-                  href="/about"
-                  className="block py-2 font-figtree font-semibold text-lg text-neutral-900"
+                <button
+                  onClick={() => scrollToSection('testimonials')}
+                  className="block py-2 font-figtree font-semibold text-lg text-neutral-900 w-full text-left"
                 >
-                  About
-                </Link>
+                  Testimonials
+                </button>
 
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-lg font-figtree font-semibold text-neutral-900 hover:bg-neutral-100">
-                    Vehicles
-                    <Icon
-                      name="caret-down"
-                      aria-hidden="true"
-                      className="size-5 flex-none group-data-open:rotate-180"
-                    />
-                  </DisclosureButton>
-
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    <DisclosureButton
-                      as="a"
-                      href="/vehicles"
-                      className="block rounded-lg py-2 pr-3 pl-6 text-sm font-figtree font-medium text-neutral-900 hover:bg-neutral-50"
-                    >
-                      Vehicles
-                    </DisclosureButton>
-                    <DisclosureButton
-                      as="a"
-                      href="/vehicles"
-                      className="block rounded-lg py-2 pr-3 pl-6 text-sm font-figtree font-medium text-neutral-900 hover:bg-neutral-50"
-                    >
-                      Vehicle Details
-                    </DisclosureButton>
-                  </DisclosurePanel>
-                </Disclosure>
-
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-lg font-figtree font-semibold text-neutral-900 hover:bg-neutral-100">
-                    All Pages
-                    <Icon
-                      name="caret-down"
-                      aria-hidden="true"
-                      className="size-5 flex-none group-data-open:rotate-180"
-                    />
-                  </DisclosureButton>
-
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...all_pages].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pr-3 pl-6 text-sm font-figtree font-medium text-neutral-900 hover:bg-neutral-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-
-                <Link
-                  href="/news"
-                  className="block py-2 font-figtree font-semibold text-lg text-neutral-900"
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="block py-2 font-figtree font-semibold text-lg text-neutral-900 w-full text-left"
                 >
-                  News
-                </Link>
+                  Contact
+                </button>
+
+                <button
+                  onClick={() => scrollToSection('faq')}
+                  className="block py-2 font-figtree font-semibold text-lg text-neutral-900 w-full text-left"
+                >
+                  FAQ
+                </button>
               </div>
 
               <div className="py-6">
-                <Link
-                  href="/contact"
-                  className="block py-2 font-figtree font-semibold text-lg text-neutral-900"
-                >
-                  Get In Touch
-                </Link>
+                  <button
+                    onClick={handleLoginGatedClick}
+                    className="block py-2 font-figtree font-semibold text-lg text-neutral-900 w-full text-left"
+                  >
+                    Sign in
+                  </button>
               </div>
             </div>
           </div>

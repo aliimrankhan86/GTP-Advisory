@@ -34,12 +34,9 @@ const Inventory = () => {
   return (
     <div ref={container} className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-        <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-neutral-950">
-          OUR VEHICLES
-        </div>
-        <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
-          Explore the Lineup
-        </h1>
+    <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
+      AI Solutions that drive impact
+    </h1>
 
         <div className="mt-12 flex flex-col gap-y-8 lg:mt-20">
           {vehicles.map((item) => (

@@ -1,6 +1,8 @@
 "use client";
 
 import Button from "@/components/Button";
+import LoginGatedButton from "@/components/LoginGatedButton";
+import ConsultationButton from "@/components/ConsultationButton";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -27,34 +29,30 @@ const Hero = () => {
     <div
       ref={container}
       className="relative flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/cover.webp')" }}
+      style={{ backgroundImage: "url('/images/green-banner.png')" }}
     >
       <div className="absolute inset-0 bg-black/50 z-0" />
 
       <div className="mx-auto max-w-7xl w-full px-6 pt-56 pb-24 z-10 lg:pt-80">
         <div className="flex flex-col items-center max-w-4xl mx-auto">
-          <div className="animate font-figtree font-medium text-xs tracking-[.12em] uppercase text-lime-300">
-            DRIVE THE FUTURE TODAY
-          </div>
           <div className="animate mt-4 px-2 font-onest text-white font-medium text-5xl text-center leading-[1.2] md:text-8xl">
-            Experience the Quiet Revolution
+            Power the AI Revolution with Agency4
+          </div>
+          <div className="animate mt-6 px-2 font-figtree text-lg text-white text-center max-w-3xl">
+            Drive your vision forward with intelligence that thinks, adapts, and acts, all in real time.
+            At agency4, we empower businesses with autonomous AI systems that accelerate operations, elevate insight, and unlock scale.
           </div>
           <div className="mt-8 w-full flex items-center justify-center flex-col gap-x-4 gap-y-4 lg:flex-row">
             <div className="animate w-full lg:w-auto">
-              <Button as="link" href="/vehicles" primary className="w-full">
-                Explore Vehicles
-              </Button>
+              <LoginGatedButton primary className="w-full">
+                Explore AI Capabilities
+              </LoginGatedButton>
             </div>
 
             <div className="animate w-full lg:w-auto">
-              <Button
-                as="link"
-                href="/contact"
-                stroke
-                className="w-full text-white border-white/12 hover:border-white"
-              >
-                Book a Test Drive
-              </Button>
+              <ConsultationButton primary className="w-full">
+                Book a Free Consultation
+              </ConsultationButton>
             </div>
           </div>
         </div>
@@ -63,33 +61,32 @@ const Hero = () => {
           <div className="grid grid-cols-2 gap-y-6 lg:grid-flow-col-dense">
             <div className="animate text-center border-r px-6 border-white/12 lg:text-left lg:px-8">
               <div className="font-onest text-2xl font-medium text-white">
-                370 miles
+                99.9% Uptime
               </div>
-              <div className="mt-2 font-figtree text-sm text-white">Range</div>
+              <div className="mt-2 font-figtree text-sm text-white">Enterprise Resilience</div>
             </div>
 
             <div className="animate text-center px-6 lg:text-left lg:px-8">
               <div className="font-onest text-2xl font-medium text-white">
-                155 mph
+                &lt;1s Response
               </div>
               <div className="mt-2 font-figtree text-sm text-white">
-                Top Speed
+                Instant AI Reasoning
               </div>
             </div>
 
             <div className="animate col-span-2 text-center border-t pt-6 border-white/12 lg:border-l lg:border-t-0 lg:pt-0 lg:pl-8 lg:text-left">
               <div className="font-onest text-2xl font-medium text-white">
-                3.2 seconds
+                5× Productivity
               </div>
               <div className="mt-2 font-figtree text-sm text-white">
-                0-60 mph
+                Measurable Business Impact
               </div>
             </div>
           </div>
 
           <div className="animate font-figtree text-center text-base text-white max-w-sm lg:text-left">
-            Experience the next generation of driving—lightning-fast
-            acceleration, zero emissions, and technology that thinks ahead.
+            Discover applied AI that transforms workflows, powers decisions, and enriches every interaction.
           </div>
         </div>
       </div>

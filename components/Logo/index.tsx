@@ -25,7 +25,7 @@ const Logo = ({ mobileMenuOpen }: LogoProps) => {
       <span
         className={`font-onest font-semibold text-2xl ${mobileMenuOpen ? "text-neutral-950" : "text-white"}`}
       >
-        Voltz
+        Agency4
       </span>
     </Link>
   );

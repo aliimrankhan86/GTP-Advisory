@@ -64,8 +64,8 @@ const Team = ({ members }: TeamProps) => {
                 <Image
                   src={item.image}
                   alt="Driving Image"
-                  objectFit="cover"
-                  layout="fill"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
 
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

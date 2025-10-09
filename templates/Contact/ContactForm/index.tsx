@@ -41,8 +41,8 @@ const ContactForm = () => {
             <Image
               src="/images/contact-form.jpg"
               alt="About Image"
-              objectFit="cover"
-              layout="fill"
+              fill
+              style={{ objectFit: "cover" }}
             />
           </div>
 
