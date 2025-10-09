@@ -3,7 +3,16 @@
 import Button from "../Button";
 import { useLoginGate } from "@/contexts/LoginGateContext";
 
-type LoginGatedButtonProps = React.ComponentProps<typeof Button>;
+type LoginGatedButtonProps = {
+  className?: string;
+  icon?: string;
+  children?: React.ReactNode;
+  primary?: boolean;
+  secondary?: boolean;
+  stroke?: boolean;
+  ghost?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+};
 
 const LoginGatedButton = ({ onClick, ...props }: LoginGatedButtonProps) => {
   const { openLoginPrompt } = useLoginGate();

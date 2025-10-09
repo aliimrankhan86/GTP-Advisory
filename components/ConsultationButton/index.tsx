@@ -4,7 +4,14 @@ import React from 'react';
 import Button from '../Button';
 import { useConsultation } from '@/contexts/ConsultationContext';
 
-type ConsultationButtonProps = Omit<React.ComponentProps<typeof Button>, 'onClick'> & {
+type ConsultationButtonProps = {
+  className?: string;
+  icon?: string;
+  children?: React.ReactNode;
+  primary?: boolean;
+  secondary?: boolean;
+  stroke?: boolean;
+  ghost?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
