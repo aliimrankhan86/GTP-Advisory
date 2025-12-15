@@ -28,23 +28,28 @@ const Footer = () => {
                 <Icon name="location" className="fill-lime-300" />
                 <div>
                   <div className="font-figtree font-medium text-base text-white">
-                    Address
+                    Addresses
                   </div>
                   <div className="mt-2 flex flex-col gap-3 font-figtree text-sm text-neutral-400">
                     <div>
                       <div className="font-medium text-white">United States</div>
-                      <div>GTP Advisory</div>
+                      <div>GTP Advisory & WZ Advisory</div>
                       <div>PO Box 2253, Allen, Texas 75013</div>
                     </div>
                     <div>
                       <div className="font-medium text-white">United Kingdom</div>
-                      <div>GTP Advisory</div>
+                      <div>Paramount Consultants Ltd</div>
                       <div>26 Thurston Road, Slough, London, UK</div>
+                      <div>Paramount Consultants Ltd is our UK collaborative partner</div>
                     </div>
                     <div>
                       <div className="font-medium text-white">Pakistan</div>
-                      <div>GTP Advisory</div>
-                      <div>Plot no 11-C, Office no 301, 3rd floor Lane no 12 Dha phase 6 Karachi 75600, Pakistan</div>
+                      <div>Softel</div>
+                      <div>
+                        Plot no 11-C, Office no 301, 3rd floor Lane no 12 Dha
+                        phase 6 Karachi 75600, Pakistan
+                      </div>
+                      <div>Softel is our Pakistan collaborative partner</div>
                     </div>
                   </div>
                 </div>
