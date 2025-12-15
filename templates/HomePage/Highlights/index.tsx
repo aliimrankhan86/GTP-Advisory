@@ -41,7 +41,7 @@ const Highlights = () => {
           </h2>
           <p className="animate mt-4 font-figtree text-lg text-neutral-500">
             Bring your AI vision to life in record time.
-            From rapid proof-of-concept to scalable production systems, Agency4 empowers teams to deploy intelligent solutions that evolve, adapt, and outperform expectations.
+            From rapid proof-of-concept to scalable production systems, GTP Advisory empowers teams to deploy intelligent solutions that evolve, adapt, and outperform expectations.
           </p>
           <div className="animate mt-6">
             <LoginGatedButton stroke>Learn More</LoginGatedButton>
@@ -89,7 +89,7 @@ const Highlights = () => {
           </h2>
           <p className="animate mt-4 font-figtree text-lg text-neutral-900">
             Connect intelligence across every system, channel, and workflow.
-            Agency4's modular AI infrastructure fits perfectly into your environment, uniting automation, analytics, and communication into a single intelligent network.
+            GTP Advisory's modular AI infrastructure fits perfectly into your environment, uniting automation, analytics, and communication into a single intelligent network.
           </p>
           <div className="animate mt-6">
             <LoginGatedButton secondary>Explore Integration</LoginGatedButton>

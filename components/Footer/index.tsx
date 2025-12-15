@@ -31,7 +31,9 @@ const Footer = () => {
                     Address
                   </div>
                   <div className="mt-2 font-figtree text-sm text-neutral-400">
-                    agency4, London, UK
+                    GTP Advisory
+                    <br />
+                    PO Box 2253, Allen, Texas 75013
                   </div>
                 </div>
               </div>
@@ -43,7 +45,7 @@ const Footer = () => {
                     Phone Number
                   </div>
                   <div className="mt-2 font-figtree text-sm text-neutral-400">
-                    +44 7762 206676
+                    +1 (469) 555-0123
                   </div>
                 </div>
               </div>
@@ -55,7 +57,7 @@ const Footer = () => {
                     Email
                   </div>
                   <div className="mt-2 font-figtree text-sm text-neutral-400">
-                    info@agency4.ai
+                    info@gtpadvisory.com
                   </div>
                 </div>
               </div>
@@ -68,7 +70,7 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col gap-6 items-center justify-between lg:flex-row">
             <div className="font-figtree text-base text-white">
-              © {new Date().getFullYear()} agency4 — All rights reserved
+              © {new Date().getFullYear()} GTP Advisory — All rights reserved
             </div>
 
             <div className="flex items-center gap-12">

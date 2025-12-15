@@ -2,9 +2,9 @@ export const reviews = [
   {
     rating: "5.0",
     date: "OCT 3 2025",
-    title: "Agency4 launched our entire automation stack in weeks. ROI followed within days.",
+    title: "GTP Advisory launched our entire automation stack in weeks. ROI followed within days.",
     review:
-      "Agency4 launched our entire automation stack in weeks. ROI followed within days.",
+      "GTP Advisory launched our entire automation stack in weeks. ROI followed within days.",
     reviewer_image: "/reviews/maya-robinson.png",
     reviewer: "Maya Robinson",
     location: "San Francisco",
@@ -32,9 +32,9 @@ export const reviews = [
   {
     rating: "4.0",
     date: "JUL 12 2025",
-    title: "Enterprise-grade AI at approachable scale. Agency4 redefined how we use tech.",
+    title: "Enterprise-grade AI at approachable scale. GTP Advisory redefined how we use tech.",
     review:
-      "Enterprise-grade AI at approachable scale. Agency4 redefined how we use tech.",
+      "Enterprise-grade AI at approachable scale. GTP Advisory redefined how we use tech.",
     reviewer_image: "/reviews/samuel-bennett.png",
     reviewer: "Samuel Bennett",
     location: "Seattle",

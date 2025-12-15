@@ -48,11 +48,11 @@ const About = () => {
 
           <div className="flex flex-col items-start">
             <h1 className="animate mt-4 font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
-              Powering the Agency4 AI Revolution
+              Powering the GTP Advisory AI Revolution
             </h1>
 
             <p className="animate mt-12 font-figtree text-lg text-neutral-500 lg:mt-auto">
-              Agency4 engineers AI ecosystems that connect every layer of your organisation from workflows to voice and data.
+              GTP Advisory engineers AI ecosystems that connect every layer of your organisation from workflows to voice and data.
               By combining real-time reasoning, adaptive learning and seamless integration, our technology eliminates bottlenecks and amplifies performance. What once required teams and tools now runs autonomously, intelligently, and at scale.
             </p>
 

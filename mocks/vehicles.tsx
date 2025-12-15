@@ -9,7 +9,7 @@ export const vehicles = [
     vehicle: "01",
     name: "AI Voice Intelligence",
     description:
-      "Designed for human-like conversations, multilingual communication, and lightning-fast response times. AI Voice Intelligence from Agency4 transforms customer interactions into seamless, intelligent dialogues that work naturally across every channel and timezone.",
+      "Designed for human-like conversations, multilingual communication, and lightning-fast response times. AI Voice Intelligence from GTP Advisory transforms customer interactions into seamless, intelligent dialogues that work naturally across every channel and timezone.",
     range: "<1 s Response",
         top_speed: "Multiple Languages",
     mph: "24/7 Availability",
@@ -25,7 +25,7 @@ export const vehicles = [
     vehicle: "02",
     name: "AI Workflow Automation",
     description:
-      "Automate repetitive processes with intelligence that adapts, learns, and scales. Agency4's automation systems synchronise data, streamline operations, and reduce manual effort — freeing teams to focus on innovation.",
+      "Automate repetitive processes with intelligence that adapts, learns, and scales. GTP Advisory's automation systems synchronise data, streamline operations, and reduce manual effort — freeing teams to focus on innovation.",
     range: "70% Faster",
     top_speed: "99.9% Uptime",
     mph: "Rapid Deployment",

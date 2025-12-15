@@ -3,7 +3,7 @@ export const faqs = [
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "What is agency4?",
+        question: "What is GTP Advisory?",
         answer:
           "A full-spectrum AI partner: we plan, build, integrate, and scale systems for automation, agents, analytics, and transformation.",
       },

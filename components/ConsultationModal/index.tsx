@@ -99,7 +99,7 @@ const ConsultationModal = ({ isOpen, onClose }: ConsultationModalProps) => {
                   Book a Free Consultation
                 </h2>
                 <p className="mt-4 font-figtree text-base text-neutral-500">
-                  Let's discuss how Agency4 can transform your business with AI
+                  Let's discuss how GTP Advisory can transform your business with AI
                 </p>
               </div>
 
@@ -219,7 +219,7 @@ const ConsultationModal = ({ isOpen, onClose }: ConsultationModalProps) => {
                 Consultation Requested!
               </h2>
               <p className="font-figtree text-base text-neutral-500 mb-6">
-                Thank you for your interest in Agency4. We'll be in touch within 24 hours to schedule your free consultation.
+                Thank you for your interest in GTP Advisory. We'll be in touch within 24 hours to schedule your free consultation.
               </p>
               <Button onClick={handleClose} primary>
                 Close

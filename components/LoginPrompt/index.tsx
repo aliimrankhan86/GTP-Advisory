@@ -117,7 +117,7 @@ const LoginPrompt = ({ isOpen, onClose, initialMode = "signin" }: LoginPromptPro
             <p className="mt-4 font-figtree text-base text-neutral-500">
               {mode === "signin" 
                 ? "Please sign in to access this feature" 
-                : "Get started with Agency4 today"}
+                : "Get started with GTP Advisory today"}
             </p>
 
             {/* Provider Buttons */}

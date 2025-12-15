@@ -39,7 +39,7 @@ const Features = () => {
           AI in Action
         </h1>
         <p className="animate mt-4 max-w-3xl font-figtree text-lg text-neutral-500">
-          From automation to intelligent communication, every capability is designed to help businesses operate faster, engage customers naturally, and scale with confidence using Agency4's applied AI.
+          From automation to intelligent communication, every capability is designed to help businesses operate faster, engage customers naturally, and scale with confidence using GTP Advisory's applied AI.
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:mt-20 lg:grid-cols-2">

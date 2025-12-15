@@ -105,7 +105,7 @@ Wants consultation: ${formData.wantsConsultation ? 'Yes' : 'No'}
       `.trim();
 
       // For now, use mailto as fallback since no email service is configured
-      const mailtoLink = `mailto:support@agency4.ai?subject=New website enquiry&body=${encodeURIComponent(emailBody)}`;
+      const mailtoLink = `mailto:support@gtpadvisory.com?subject=New website enquiry&body=${encodeURIComponent(emailBody)}`;
       window.open(mailtoLink, '_blank');
       
       setIsSuccess(true);
@@ -153,7 +153,7 @@ Wants consultation: ${formData.wantsConsultation ? 'Yes' : 'No'}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="animate text-center max-w-2xl mx-auto mb-12">
           <h1 className="font-onest text-5xl font-medium leading-[1.2] text-neutral-950 lg:text-7xl">
-            Contact Agency4
+            Contact GTP Advisory
           </h1>
           <p className="mt-4 font-figtree text-lg text-neutral-500">
             Tell us a little about your needs and we'll get back within one business day.
