@@ -30,10 +30,22 @@ const Footer = () => {
                   <div className="font-figtree font-medium text-base text-white">
                     Address
                   </div>
-                  <div className="mt-2 font-figtree text-sm text-neutral-400">
-                    GTP Advisory
-                    <br />
-                    PO Box 2253, Allen, Texas 75013
+                  <div className="mt-2 flex flex-col gap-3 font-figtree text-sm text-neutral-400">
+                    <div>
+                      <div className="font-medium text-white">United States</div>
+                      <div>GTP Advisory</div>
+                      <div>PO Box 2253, Allen, Texas 75013</div>
+                    </div>
+                    <div>
+                      <div className="font-medium text-white">United Kingdom</div>
+                      <div>GTP Advisory</div>
+                      <div>26 Thurston Road, Slough, London, UK</div>
+                    </div>
+                    <div>
+                      <div className="font-medium text-white">Pakistan</div>
+                      <div>GTP Advisory</div>
+                      <div>Plot no 11-C, Office no 301, 3rd floor Lane no 12 Dha phase 6 Karachi 75600, Pakistan</div>
+                    </div>
                   </div>
                 </div>
               </div>
