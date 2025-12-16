@@ -54,19 +54,6 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex gap-4">
-                <Icon name="phone" className="fill-lime-300" />
-                <div>
-                  <div className="font-figtree font-medium text-base text-white">
-                    Phone Number
-                  </div>
-                  <div className="mt-2 font-figtree text-sm text-neutral-400">
-                    +1 (469) 555-0123
-                  </div>
-                </div>
-              </div>
-
               <div className="flex gap-4">
                 <Icon name="email" className="fill-lime-300" />
                 <div>
